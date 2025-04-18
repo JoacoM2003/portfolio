@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Bienvenido{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <div class="left">
+            <h1>Soy desarrollador</h1>
+            <h1>Joaquin Muñoz</h1>
+            <p>Construyo aplicaciones en Python dinámicas utilizando bases de datos relacionables</p>
+            <a href="#contact" class="btn">Contáctame</a>
+        </div>
+        <div class="right">
+            <img src="{% static 'big-data.png' %}" width="600px">
+        </div>
+    </div>
+</div>
+{% include 'section-first.html' %}
+{% include 'section-second.html' %}
+{% include 'section-third.html' %}
+
+{% endblock %}

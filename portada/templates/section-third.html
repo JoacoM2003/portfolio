@@ -1,0 +1,21 @@
+<div class="center padded">
+    <div class="content">
+        <div class="row vert-pad">
+            <div class="left padded">
+                <h1>Hola</h1>
+                <p>Holaaaaa</p>
+            </div>
+            <div id="contact" class="right padded">
+                <form class="contact-form" action="{% url 'mail' %}" method="post">
+                    {% csrf_token %}
+                    <h1>Contáctame</h1>
+                    <input name="name" type="text" placeholder="Nombre" required>
+                    <input name="email" type="email" placeholder="Correo" required>
+                    <input type="text" placeholder="Asunto">
+                    <textarea name="message" placeholder="Mensaje" required minlength="10"></textarea>
+                    <button class="btn full-width" type="submit">Enviar</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
