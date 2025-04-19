@@ -35,10 +35,10 @@ def send_mail(name, email, message):
 
 
 def mail(request):
-    name = request.POST['name']
-    email = request.POST['email']
-    message = request.POST['message']
     if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        message = request.POST['message']
         send_mail(name, email, message)
         return render(request, 'mail.html')
     return redirect('index')
