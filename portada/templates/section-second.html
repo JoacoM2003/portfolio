@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+    <style>
+        /* Estilos del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
 <div class="center padded white-bg">
     <div class="content padded">
         <div class="padded">
@@ -7,18 +40,50 @@
             <div class="card third">
                 <h3>Gestor de Alumnos</h3>
                 <p>Una aplicación web con Django para la inscripción y el control de alumnos. A desplegar.</p>
-                <a href="#" class="orange">Link aquí</a>
+                <a href="#" class="orange modal-trigger">Link aquí</a>
             </div>
             <div class="card third">
                 <h3>Sistema de turnos para canchas</h3>
                 <p>Un sistema web con Django para la gestión de turnos para canchas de futbol. A desplegar.</p>
-                <a href="#" class="orange">Link aquí</a>
+                <a href="#" class="orange modal-trigger">Link aquí</a>
             </div>
             <div class="card third">
                 <h3>ABM de Veterinaria.</h3>
                 <p>Un sistema web con Django para la gestión de veterinaria, incluye Dockerización y Entrega/Integración Continua. A desplegar.</p>
-                <a href="#" class="orange">Link aquí</a>
+                <a href="#" class="orange modal-trigger">Link aquí</a>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p>El proyecto está creado y siendo desplegado.</p>
+    </div>
+</div>
+
+<script>
+    // Lógica para abrir y cerrar el modal
+    document.querySelectorAll('.modal-trigger').forEach(el => {
+        el.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('modal').style.display = 'block';
+        });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
