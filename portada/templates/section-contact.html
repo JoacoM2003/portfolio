@@ -1,3 +1,20 @@
+{% load static %}
+<style>
+.boton-pdf {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #005f73; /* Azul oscuro elegante */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.boton-pdf:hover {
+  background-color: #0a9396; /* Un poco más claro al pasar el mouse */
+}
+</style>
 <div class="center padded ">
     <div class="content">
         <div class="row vert-pad">
@@ -7,7 +24,11 @@
                 ¿Tenés una propuesta, proyecto o consulta? Estoy abierto a nuevas oportunidades laborales o colaboraciones.
                 <br><br>
                 Completá el formulario y te respondo lo antes posible. ¡Gracias por pasar!
-                </p>          
+                </p>
+            <a href="{% static 'CV Joaquin Munoz.pdf' %}" download class="boton-pdf">
+                Descargar CV
+            </a>
+          
             </div>
             <div id="contact" class="right padded">
                 <form class="contact-form" action="{% url 'mail' %}" method="post">

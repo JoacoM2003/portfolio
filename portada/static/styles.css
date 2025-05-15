@@ -189,3 +189,18 @@ footer{
 .white-bg{
     background-color: #fff;
 }
+
+.boton-pdf {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #005f73; /* Azul oscuro elegante */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.boton-pdf:hover {
+  background-color: #0a9396; /* Un poco más claro al pasar el mouse */
+}
