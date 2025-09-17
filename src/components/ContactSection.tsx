@@ -56,7 +56,7 @@ const ContactSection = () => {
       href: "https://github.com/JoacoM2003/",
       color: "primary"
     },
-    {
+    { 
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
       value: "linkedin.com/in/joaquin-munoz-dev",
@@ -168,7 +168,7 @@ const ContactSection = () => {
             </div>
 
             {/* Contact form */}
-            <div className="bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            {/* <div className="bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Envíame un mensaje
               </h3>
@@ -252,7 +252,7 @@ const ContactSection = () => {
               <p className="text-xs text-muted-foreground text-center mt-4">
                 Respondo generalmente en 24-48 horas
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
