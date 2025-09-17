@@ -111,7 +111,7 @@ const Footer = () => {
               <span>© {currentYear} Portfolio Backend Python & Data Science.</span>
               <span className="flex items-center">
                 Hecho con <Heart className="w-4 h-4 mx-1 text-red-500" fill="currentColor" /> 
-                y mucho código
+                y mucho código.
               </span>
             </div>
             
@@ -126,11 +126,11 @@ const Footer = () => {
           </div>
 
           {/* Extra info */}
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <p className="text-xs text-muted-foreground">
               🚀 Este portfolio está construido con React, TypeScript, Tailwind CSS y mucha pasión por el desarrollo
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

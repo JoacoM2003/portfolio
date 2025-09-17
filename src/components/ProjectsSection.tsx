@@ -4,12 +4,28 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Pipeline ETL Automatizado",
-      description: "Sistema de extracción, transformación y carga de datos usando Python y SQL. Automatización completa con validación de calidad de datos.",
-      technologies: ["Python", "Pandas", "SQL", "Apache Airflow", "Docker"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      title: "Pipeline ETL de Ecommerce",
+      description: "Sistema de extracción, transformación y carga de datos de un ecommerce usando Python y SQL. Automatización completa con validación de calidad de datos y visualización de KPIs en Power BI. Exposición de datos mediante API.",
+      technologies: ["Python", "Pandas", "SQL", "Apache Airflow", "Docker", "Power BI"],
+      github: "https://github.com/JoacoM2003/ecommerceData",
+      demo: "#",
       category: "Data Engineering"
+    },
+    {
+      title: "Webapp Ecommerce con Django",
+      description: "Plataforma web de ecommerce desarrollada con Django y PostgreSQL. Gestión de productos, usuarios, carrito de compras y pagos. Implementación de frontend responsive y panel de administración.",
+      technologies: ["Python", "Django", "PostgreSQL", "Bootstrap", "Docker"],
+      github: "https://github.com/JoacoM2003/ecommerce",
+      demo: "#",
+      category: "Full Stack"
+    },
+    {
+      title: "Gestor Académico",
+      description: "Aplicación para la gestión académica de alumnos, materias y calificaciones. Implementa funcionalidades para registrar inscripciones, administrar horarios y generar reportes de desempeño.",
+      technologies: ["Python", "Django", "Postgres", "Bootstrap", "Docker"],
+      github: "https://github.com/JoacoM2003/gestorAlum",
+      demo: "https://gestoralum.onrender.com",
+      category: "Backend Development"
     },
   ];
 
