@@ -16,12 +16,12 @@ const ProjectsSection = () => {
       description: "Plataforma web de ecommerce desarrollada con Django y PostgreSQL. Gestión de productos, usuarios, carrito de compras y pagos. Implementación de frontend responsive y panel de administración.",
       technologies: ["Python", "Django", "PostgreSQL", "Bootstrap", "Docker"],
       github: "https://github.com/JoacoM2003/ecommerce",
-      demo: "#",
+      demo: "https://ecommerce-g2jg.onrender.com/",
       category: "Full Stack"
     },
     {
       title: "Gestor Académico",
-      description: "Aplicación para la gestión académica de alumnos, materias y calificaciones. Implementa funcionalidades para registrar inscripciones, administrar horarios y generar reportes de desempeño.",
+      description: "Aplicación para la gestión académica de alumnos, materias y calificaciones. Implementa funcionalidades para registrar inscripciones, administrar horarios y materias.",
       technologies: ["Python", "Django", "Postgres", "Bootstrap", "Docker"],
       github: "https://github.com/JoacoM2003/gestorAlum",
       demo: "https://gestoralum.onrender.com",
