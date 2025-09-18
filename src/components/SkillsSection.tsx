@@ -1,4 +1,4 @@
-import { Code, Database, BarChart3, Cloud, GitBranch, Brain } from "lucide-react";
+import { Code, Database, BarChart3, Cloud, GitBranch, Brain, Workflow } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -6,36 +6,50 @@ const SkillsSection = () => {
       title: "Lenguajes & Backend",
       icon: <Code className="w-8 h-8" />,
       color: "primary",
-      skills: ["Python", "Django", "FastAPI", "Flask", "SQL"],
+      skills: ["Python", "Django", "FastAPI", "Flask", "REST APIs", "Microservicios"],
+    },
+    {
+      title: "Data Engineering & ETL",
+      icon: <Workflow className="w-8 h-8" />,
+      color: "accent",
+      skills: [
+        "ETL Pipelines",
+        "Airflow",
+        "Pandas",
+        "NumPy",
+        "PySpark (intro)",
+        "Data Lakes",
+        "Data Warehousing",
+      ],
     },
     {
       title: "Data & Analytics / BI",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "accent",
-      skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Power BI", "Jupyter", "Excel"],
+      color: "success",
+      skills: ["Matplotlib", "Seaborn", "Power BI", "Jupyter", "Excel", "SQL Analytics"],
     },
     {
       title: "Bases de Datos",
       icon: <Database className="w-8 h-8" />,
-      color: "success",
+      color: "primary",
       skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
     },
     {
       title: "DevOps & Tools",
       icon: <Cloud className="w-8 h-8" />,
-      color: "primary",
-      skills: ["Git", "Docker", "Postman", "Linux", "AWS"],
+      color: "accent",
+      skills: ["Git", "Docker", "Linux", "AWS", "Postman", "CI/CD Pipelines"],
     },
     {
-      title: "Testing & CI/CD",
+      title: "Testing & QA",
       icon: <GitBranch className="w-8 h-8" />,
-      color: "accent",
-      skills: ["Unit Testing", "Integration Testing", "GitHub Actions"],
+      color: "success",
+      skills: ["Unit Testing", "Integration Testing", "Pytest", "GitHub Actions"],
     },
     {
       title: "Machine Learning (Intro)",
       icon: <Brain className="w-8 h-8" />,
-      color: "success",
+      color: "primary",
       skills: ["Scikit-learn", "TensorFlow", "Keras", "OpenCV", "Statistics"],
     },
   ];
@@ -69,7 +83,7 @@ const SkillsSection = () => {
             </h2>
             <div className="h-1 w-24 mx-auto hero-gradient rounded-full mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Especializado en desarrollo backend con Python, análisis de datos y Business Intelligence
+              Especializado en desarrollo backend, ingeniería de datos y BI, con experiencia en la construcción de APIs, pipelines ETL y automatización de procesos.
             </p>
           </div>
 
@@ -111,10 +125,9 @@ const SkillsSection = () => {
             <div className="bg-card border border-border rounded-xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-foreground mb-4">Aprendizaje Continuo</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Mi pasión por la tecnología me impulsa a mantenerme actualizado con las últimas 
-                tendencias en desarrollo backend, ciencia de datos y análisis de datos. Constantemente 
-                expandiendo mis conocimientos a través de proyectos prácticos, cursos especializados 
-                y contribuciones a la comunidad de código abierto.
+                Me mantengo en constante aprendizaje sobre desarrollo backend, arquitectura de microservicios e ingeniería de datos. 
+                Trabajo en proyectos prácticos, cursos especializados y contribuyo en iniciativas open-source para fortalecer mis 
+                habilidades y mantenerme alineado con las demandas del mercado.
               </p>
             </div>
           </div>
