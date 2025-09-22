@@ -4,10 +4,10 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Pipeline ETL de Ecommerce",
-      description: "Sistema de extracción, transformación y carga de datos de un ecommerce usando Python y SQL. Automatización completa con validación de calidad de datos y visualización de KPIs en Power BI. Exposición de datos mediante API.",
-      technologies: ["Python", "Pandas", "SQL", "Apache Airflow", "Docker", "Power BI"],
-      github: "https://github.com/JoacoM2003/ecommerceData",
+      title: "Movies Data Pipeline",
+      description: "Pipeline de extracción, transformación y carga (ETL) de datos de películas. Los datos se limpian y transforman con Python y Pandas, se almacenan en PostgreSQL y CSV, y se automatizan con Apache Airflow en contenedores Docker. Además, se expone una API con FastAPI para consultar la información cargada.",
+      technologies: ["Python", "Pandas", "PostgreSQL", "Apache Airflow", "Docker", "FastAPI"],
+      github: "https://github.com/JoacoM2003/moviesETL",  
       demo: "#",
       category: "Data Engineering"
     },
