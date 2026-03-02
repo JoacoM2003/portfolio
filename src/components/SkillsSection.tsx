@@ -3,54 +3,34 @@ import { Code, Database, BarChart3, Cloud, GitBranch, Brain, Workflow } from "lu
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Lenguajes & Backend",
+      title: "Lenguajes & Frameworks",
       icon: <Code className="w-8 h-8" />,
       color: "primary",
-      skills: ["Python", "Django", "FastAPI", "Flask", "REST APIs", "Microservicios"],
+      skills: ["Python", "FastAPI", "Django", "React", "Flask"],
     },
     {
-      title: "Data Engineering & ETL",
+      title: "Arquitectura Backend",
       icon: <Workflow className="w-8 h-8" />,
       color: "accent",
-      skills: [
-        "ETL Pipelines",
-        "Airflow",
-        "Pandas",
-        "NumPy",
-        "PySpark (intro)",
-        "Data Lakes",
-        "Data Warehousing",
-      ],
-    },
-    {
-      title: "Data & Analytics / BI",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "success",
-      skills: ["Matplotlib", "Seaborn", "Power BI", "Jupyter", "Excel", "SQL Analytics"],
+      skills: ["REST APIs", "Arquitectura en capas", "MVC", "Clean Architecture", "Diseño de Sistemas"],
     },
     {
       title: "Bases de Datos",
       icon: <Database className="w-8 h-8" />,
       color: "primary",
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+      skills: ["PostgreSQL", "SQLAlchemy", "Redis (básico)"],
     },
     {
-      title: "DevOps & Tools",
+      title: "DevOps & Cloud",
       icon: <Cloud className="w-8 h-8" />,
       color: "accent",
-      skills: ["Git", "Docker", "Linux", "AWS", "Postman", "CI/CD Pipelines"],
+      skills: ["Git", "Docker", "Docker Compose", "Linux", "GitHub Actions", "CI/CD Platforms"],
     },
     {
-      title: "Testing & QA",
+      title: "Testing & Calidad de Código",
       icon: <GitBranch className="w-8 h-8" />,
       color: "success",
-      skills: ["Unit Testing", "Integration Testing", "Pytest", "GitHub Actions"],
-    },
-    {
-      title: "Machine Learning (Intro)",
-      icon: <Brain className="w-8 h-8" />,
-      color: "primary",
-      skills: ["Scikit-learn", "TensorFlow", "Keras", "OpenCV", "Statistics"],
+      skills: ["Unit Testing", "Integration Testing", "Pytest"],
     },
   ];
 
@@ -83,7 +63,7 @@ const SkillsSection = () => {
             </h2>
             <div className="h-1 w-24 mx-auto hero-gradient rounded-full mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Especializado en desarrollo backend, ingeniería de datos y BI, con experiencia en la construcción de APIs, pipelines ETL y automatización de procesos.
+              Especializado en ingeniería de software con fuerte enfoque en arquitectura backend, construcción de APIs, modelado de bases de datos y despliegue de aplicaciones escalables.
             </p>
           </div>
 
@@ -125,8 +105,8 @@ const SkillsSection = () => {
             <div className="bg-card border border-border rounded-xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-foreground mb-4">Aprendizaje Continuo</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Me mantengo en constante aprendizaje sobre desarrollo backend, arquitectura de microservicios e ingeniería de datos. 
-                Trabajo en proyectos prácticos, cursos especializados y contribuyo en iniciativas open-source para fortalecer mis 
+                Me mantengo en constante aprendizaje sobre desarrollo backend, arquitectura de microservicios e ingeniería de datos.
+                Trabajo en proyectos prácticos, cursos especializados y contribuyo en iniciativas open-source para fortalecer mis
                 habilidades y mantenerme alineado con las demandas del mercado.
               </p>
             </div>

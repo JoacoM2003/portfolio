@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Github, Linkedin, MapPin, Phone, Send } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Phone, Send, Download } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -12,7 +12,7 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
-  
+
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,13 +25,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission
     toast({
       title: "Mensaje enviado",
       description: "Gracias por contactarme. Te responderé pronto!",
     });
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -56,7 +56,7 @@ const ContactSection = () => {
       href: "https://github.com/JoacoM2003/",
       color: "primary"
     },
-    { 
+    {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
       value: "linkedin.com/in/joaquin-munoz-dev",
@@ -104,8 +104,8 @@ const ContactSection = () => {
                   Información de Contacto
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Estoy siempre abierto a nuevas oportunidades, colaboraciones y proyectos desafiantes. 
-                  Ya sea que busques un desarrollador backend, analista de datos o alguien con experiencia en BI, 
+                  Estoy siempre abierto a nuevas oportunidades, colaboraciones y proyectos desafiantes.
+                  Ya sea que busques un desarrollador backend, analista de datos o alguien con experiencia en BI,
                   no dudes en contactarme.
                 </p>
               </div>
@@ -154,16 +154,22 @@ const ContactSection = () => {
                   🚀 ¿Listo para comenzar?
                 </h4>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Me especializo en crear soluciones robustas y escalables. Desde APIs hasta pipelines de datos, 
-                  estoy aquí para ayudarte a materializar tus ideas.
+                  Me especializo en construir soluciones de software backend robustas y escalables.
+                  Estoy buscando oportunidades para aportar valor y seguir creciendo profesionalmente.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   <span className="skill-badge text-xs">Full Time</span>
                   <span className="skill-badge text-xs">Part Time</span>
                   <span className="skill-badge text-xs">Prácticas</span>
                   <span className="skill-badge text-xs">Pasantías</span>
-
                 </div>
+                <Button
+                  className="w-full hero-gradient text-white shadow-glow hover:scale-105 transition-all duration-300"
+                  onClick={() => window.open('/cv.pdf', '_blank')}
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Descargar CV
+                </Button>
               </div>
             </div>
 

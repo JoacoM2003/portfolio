@@ -4,25 +4,33 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Movies Data Pipeline",
-      description: "Pipeline de extracción, transformación y carga (ETL) de datos de películas. Los datos se limpian y transforman con Python y Pandas, se almacenan en PostgreSQL y CSV, y se automatizan con Apache Airflow en contenedores Docker. Además, se expone una API con FastAPI para consultar la información cargada.",
-      technologies: ["Python", "Pandas", "PostgreSQL", "Apache Airflow", "Docker", "FastAPI"],
-      github: "https://github.com/JoacoM2003/moviesETL",  
+      title: "Señalizador Urbano de Reclamos",
+      description: "Plataforma integral para reportar y gestionar reclamos urbanos. Proyecto principal que demuestra integración completa entre un backend robusto y una interfaz moderna.",
+      technologies: ["FastAPI", "React", "PostgreSQL", "Docker"],
+      github: "#",
       demo: "#",
-      category: "Data Engineering"
-    },
-    {
-      title: "Webapp Ecommerce con Django",
-      description: "Plataforma web de ecommerce desarrollada con Django y PostgreSQL. Gestión de productos, usuarios, carrito de compras y pagos. Implementación de frontend responsive y panel de administración.",
-      technologies: ["Python", "Django", "PostgreSQL", "Bootstrap", "Docker"],
-      github: "https://github.com/JoacoM2003/ecommerce",
-      demo: "https://ecommerce-g2jg.onrender.com/",
       category: "Full Stack"
     },
     {
+      title: "Sistema de Reservas",
+      description: "Aplicación para gestionar reservas de forma eficiente con una arquitectura moderna orientada a servicios y contenedores.",
+      technologies: ["FastAPI", "React", "PostgreSQL", "Docker"],
+      github: "https://github.com/JoacoM2003/Reclamos",
+      demo: "https://reclamos-gray.vercel.app/",
+      category: "Full Stack"
+    },
+    {
+      title: "Webapp Ecommerce",
+      description: "Plataforma web de ecommerce con gestión de productos, usuarios, carrito de compras y pagos. Implementación de un panel de administración completo.",
+      technologies: ["Django", "PostgreSQL", "Docker"],
+      github: "https://github.com/JoacoM2003/ecommerce",
+      demo: "https://ecommerce-g2jg.onrender.com/",
+      category: "Backend Development"
+    },
+    {
       title: "Gestor Académico",
-      description: "Aplicación para la gestión académica de alumnos, materias y calificaciones. Implementa funcionalidades para registrar inscripciones, administrar horarios y materias.",
-      technologies: ["Python", "Django", "Postgres", "Bootstrap", "Docker"],
+      description: "Aplicación para la gestión académica de alumnos, materias y calificaciones. Implementa funcionalidades para registrar inscripciones y administrar horarios.",
+      technologies: ["Django", "PostgreSQL", "Docker"],
       github: "https://github.com/JoacoM2003/gestorAlum",
       demo: "https://gestoralum.onrender.com",
       category: "Backend Development"
@@ -52,7 +60,7 @@ const ProjectsSection = () => {
             </h2>
             <div className="h-1 w-24 mx-auto hero-gradient rounded-full mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Una selección de mis trabajos más significativos en Backend Python, Análisis de Datos y Business Intelligence
+              Una selección de mis trabajos más significativos en Ingeniería de Software, Arquitectura Backend y Desarrollo Full Stack.
             </p>
           </div>
 
@@ -129,7 +137,7 @@ const ProjectsSection = () => {
             <p className="text-muted-foreground mb-6">
               ¿Interesado en colaborar o conocer más detalles de algún proyecto?
             </p>
-            <Button 
+            <Button
               size="lg"
               className="hero-gradient text-white px-8 py-6 hover:scale-105 transition-all duration-300"
               asChild
