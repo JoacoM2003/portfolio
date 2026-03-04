@@ -48,7 +48,10 @@ const HeroSection = () => {
               Ingeniero de Software en formación (<span className="text-primary font-semibold">UTN</span>) con sólida base en lógica de programación, algoritmos y desarrollo Backend.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Mi enfoque combina los fundamentos de la ingeniería con el uso avanzado de IA Generativa y Agentes, utilizándolos como herramientas de productividad para acelerar el ciclo de desarrollo. Soy una persona apasionada por el aprendizaje continuo, con gran capacidad de adaptación y una fuerte orientación a aportar valor inmediato y crecer profesionalmente dentro de equipos de alto rendimiento.
+              Estudiante avanzado de Ingeniería en Sistemas con experiencia práctica en desarrollo backend utilizando Python y bases
+              de datos relacionales. He trabajado en el diseño e implementación de APIs REST, modelado de datos y estructuración
+              de aplicaciones bajo principios de arquitectura en capas. Busco integrarme al área de IT para continuar desarrollando mis
+              habilidades técnicas y aportar valor en proyectos reales.
             </p>
           </div>
 

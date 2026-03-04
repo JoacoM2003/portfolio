@@ -7,16 +7,16 @@ const ProjectsSection = () => {
       title: "Señalizador Urbano de Reclamos",
       description: "Plataforma integral para reportar y gestionar reclamos urbanos. Proyecto principal que demuestra integración completa entre un backend robusto y una interfaz moderna.",
       technologies: ["FastAPI", "React", "PostgreSQL", "Docker"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/JoacoM2003/Reclamos",
+      demo: "https://reclamos-gray.vercel.app/",
       category: "Full Stack"
     },
     {
       title: "Sistema de Reservas",
       description: "Aplicación para gestionar reservas de forma eficiente con una arquitectura moderna orientada a servicios y contenedores.",
       technologies: ["FastAPI", "React", "PostgreSQL", "Docker"],
-      github: "https://github.com/JoacoM2003/Reclamos",
-      demo: "https://reclamos-gray.vercel.app/",
+      github: "https://github.com/JoacoM2003/reservas",
+      demo: "https://reservas-xi.vercel.app/",
       category: "Full Stack"
     },
     {
