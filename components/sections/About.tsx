@@ -10,7 +10,7 @@ export default function About() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" as const }}
         style={{ marginBottom: "3rem" }}
       >
         <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.3rem 0.85rem", borderRadius: "999px", background: "rgba(168,85,247,0.08)", border: "1px solid rgba(168,85,247,0.22)", color: "#c084fc", fontSize: "0.78rem", fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "1rem" }}>
@@ -27,7 +27,7 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" as const }}
         >
           <div
             style={{
@@ -53,7 +53,7 @@ export default function About() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.55, delay: 0.15, ease: "easeOut" as const }}
             style={{ background: "#111111", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "1rem", padding: "1.75rem" }}
           >
             <h3 style={{ color: "#f1f5f9", fontSize: "1rem", fontWeight: 700, margin: "0 0 1.25rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
@@ -78,7 +78,7 @@ export default function About() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
+            transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" as const }}
             style={{ background: "#111111", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "1rem", padding: "1.75rem" }}
           >
             <h3 style={{ color: "#f1f5f9", fontSize: "1rem", fontWeight: 700, margin: "0 0 1.25rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>

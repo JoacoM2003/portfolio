@@ -60,7 +60,7 @@ const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ b
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  visible: (d: number) => ({ opacity: 1, y: 0, transition: { duration: 0.65, delay: d, ease: "easeOut" } }),
+  visible: (d: number) => ({ opacity: 1, y: 0, transition: { duration: 0.65, delay: d, ease: "easeOut" as const } }),
 };
 
 export default function Hero() {
