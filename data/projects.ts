@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Streamlit + Plotly para el dashboard analítico: visualizaciones de KPIs, distribución por géneros y explorador de datos crudos consumiendo la API REST",
       "Arquitectura multi-contenedor con Docker Compose: API, dashboard y base de datos orquestados en un solo comando",
     ],
-    demo: null,
+    demo: "https://moviesetl.streamlit.app/",
     codigo: "https://github.com/JoacoM2003/moviesETL",
     capturas: [
       "/projects/moviesETL/1.jpg",
