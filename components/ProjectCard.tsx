@@ -15,13 +15,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const cat = categoryColors[project.category] ?? categoryColors["Backend"];
-  // Use the renamed field from the new data shape
-  const p = project as unknown as {
-    slug: string; nombre: string; categoria: string; estado: string;
-    descripcionCorta: string; stack: string[]; demo: string | null; codigo: string;
-  };
-
+  const cat = categoryColors[project.categoria] ?? categoryColors["Backend"];
+  const p = project;
   return (
     <article
       className="project-card"
