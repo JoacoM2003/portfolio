@@ -18,6 +18,13 @@ const SKILL_GROUPS = [
     skills: ["FastAPI", "Django", "Flask", "SQLAlchemy", "Pydantic", "Alembic"],
   },
   {
+    label: "IA / LLMs",
+    icon: "✦",
+    color: "#fbbf24",
+    border: "rgba(245,158,11,0.25)",
+    skills: ["RAG", "Embeddings", "FAISS", "Google Gemini", "spaCy"],
+  },
+  {
     label: "Bases de Datos",
     icon: "🗄️",
     color: "#93c5fd",

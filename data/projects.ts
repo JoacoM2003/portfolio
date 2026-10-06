@@ -1,5 +1,5 @@
-export type ProjectStatus = "En producción" | "En desarrollo" | "Completado";
-export type ProjectCategory = "Full Stack" | "Backend" | "Backend / Data";
+export type ProjectStatus = "En producción" | "En desarrollo" | "Desplegado" | "Completado";
+export type ProjectCategory = "Full Stack" | "Backend" | "Backend / Data" | "Backend / IA";
 
 export interface Project {
   slug: string;
@@ -14,6 +14,10 @@ export interface Project {
   demo: string | null;
   codigo: string;
   capturas: string[] | number;
+  visible?: boolean;
+  mostrarCodigoEnTarjeta?: boolean;
+  miRol?: string;
+  notaCodigo?: string;
 }
 
 const projects: Project[] = [
@@ -29,6 +33,9 @@ const projects: Project[] = [
     stack: ["FastAPI", "React", "PostgreSQL", "Docker", "GitHub Actions", "Firebase Auth"],
     queResuelve:
       "Digitaliza el proceso de reporte y seguimiento de reclamos urbanos. Los ciudadanos reportan problemas geolocalizados, los agentes gestionan la resolución con flujo de estados controlado y los administradores tienen métricas y trazabilidad completa de cada reclamo.",
+    miRol:
+      "Proyecto en equipo. Mi aporte se concentró en el backend, las decisiones técnicas de arquitectura y el despliegue.",
+    notaCodigo: "README técnico. El código es privado (repositorio de equipo).",
     decisionesTecnicas: [
       "Arquitectura en capas (routers → dependencies → services → models) con separación estricta de responsabilidades — cambiar la lógica de negocio no requiere tocar los endpoints",
       "RBAC granular por endpoint mediante dependency injection en FastAPI: cada ruta declara explícitamente el rol requerido sin lógica de autorización duplicada",
@@ -43,7 +50,7 @@ const projects: Project[] = [
   },
   {
     slug: "movies-etl",
-    nombre: "Movies ETL Pipeline & Analytics Dashboard",
+    nombre: "ETL de Series (TVMaze) + Dashboard Analítico",
     categoria: "Backend / Data",
     estado: "Completado",
     descripcionCorta:
@@ -70,14 +77,14 @@ const projects: Project[] = [
     slug: "gestor-academico",
     nombre: "GestorAlum — Gestión Académica",
     categoria: "Backend",
-    estado: "En producción",
+    estado: "Desplegado",
     descripcionCorta:
       "Plataforma para centralizar la administración académica: inscripciones, calificaciones y dashboards por rol.",
     descripcionCompleta:
       "Sistema integral de gestión académica con tres perfiles diferenciados: alumnos, profesores y administradores. Los alumnos pueden inscribirse a materias con control de cupos en tiempo real, ver su historial de calificaciones y agenda de horarios. Los profesores gestionan sus comisiones y cargan notas. Los administradores configuran materias, comisiones y cuentas desde un panel dedicado.",
     stack: ["Django", "PostgreSQL", "Docker", "Bootstrap", "Gunicorn"],
     queResuelve:
-      "Reemplaza planillas de cálculo dispersas por un único punto de verdad para la información académica. Automatiza el control de cupos por comisión, previene doble inscripción, lleva historial histórico por alumno (incluyendo recursantes sin pisar datos anteriores) y genera dashboards con promedios y estados de cursada automáticos.",
+      "Centraliza la información académica (inscripciones, control de cupos, historial de calificaciones y dashboards) en un único sistema con tres perfiles: alumnos, profesores y administradores. Previene la doble inscripción y conserva el historial de los recursantes sin pisar datos anteriores.",
     decisionesTecnicas: [
       "RBAC mediante decoradores y mixins personalizados de Django: cada perfil (Alumno, Profesor, Admin) accede únicamente a las vistas y datos de su rol",
       "Modelo de datos en 3NF: extensión del User nativo de Django con relaciones OneToOne hacia Alumno y Profesor, desacoplando autenticación de información académica",
@@ -145,16 +152,40 @@ const projects: Project[] = [
     decisionesTecnicas: [
       "Arquitectura RAG (Retrieval-Augmented Generation) híbrida en dos etapas: pipeline offline para generar embeddings e indexar en FAISS, pipeline online para cada consulta del usuario",
       "spaCy con modelo multilingüe para NER: extrae actores, géneros y años del prompt antes de la búsqueda semántica, combinando filtrado exacto con búsqueda por similitud",
-      "FAISS (Meta) como base de datos vectorial para búsqueda semántica ultrarrápida sobre embeddings generados con SentenceTransformers multilingüe",
+      "FAISS (Meta) como base de datos vectorial para búsqueda semántica eficiente sobre embeddings generados con SentenceTransformers multilingüe",
       "Google Gemini como capa de generación: recibe las películas candidatas de FAISS y produce una respuesta natural y justificada al usuario",
       "Pipeline offline separado (setup_data.py) para descarga, limpieza y generación de índices — el servidor levanta con los índices ya construidos, sin recalcular embeddings en cada request",
     ],
     demo: null,
     codigo: "https://github.com/JoacoM2003/RecomendadorPeliculas",
+    mostrarCodigoEnTarjeta: true,
     capturas: [
       "/projects/recomendador/1.jpg",
       "/projects/recomendador/2.jpg",
     ],
+  },
+  {
+    slug: "tickets",
+    nombre: "Tickets — Soporte con priorización por IA",
+    categoria: "Backend / IA",
+    estado: "Completado",
+    descripcionCorta:
+      "Aplicación web de gestión de tickets de soporte construida con Django. Un modelo de IA asigna prioridad a cada ticket y las notificaciones se procesan de forma asíncrona mediante colas de AWS SQS. Contenerizada con Docker y cubierta por tests automatizados.",
+    descripcionCompleta:
+      "Aplicación web de gestión de tickets de soporte construida con Django. Un modelo de IA asigna prioridad a cada ticket y las notificaciones se procesan de forma asíncrona mediante colas de AWS SQS. Contenerizada con Docker y cubierta por tests automatizados.",
+    stack: ["Django", "Docker", "AWS SQS", "IA"],
+    queResuelve:
+      "Ordena la atención de tickets de soporte: prioriza automáticamente cada ticket con IA para que los casos más urgentes se atiendan primero, y desacopla el envío de notificaciones del flujo principal para que la aplicación responda rápido.",
+    decisionesTecnicas: [
+      "AWS SQS para desacoplar las notificaciones: la aplicación encola el mensaje y responde sin esperar su procesamiento.",
+      "Priorización de tickets con IA al momento de crearlos, para ordenar la cola de atención.",
+      "Optimización de consultas para evitar el problema N+1 en los listados.",
+      "Entorno reproducible con Docker.",
+      "Tests automatizados que cubren la lógica principal.",
+    ],
+    demo: null,
+    codigo: "https://github.com/JoacoM2003/Tickets",
+    capturas: [],
   },
   {
     slug: "ecommerce",
@@ -178,6 +209,7 @@ const projects: Project[] = [
     demo: "https://ecommerce-g2jg.onrender.com/",
     codigo: "https://github.com/JoacoM2003/ecommerce",
     capturas: [],
+    visible: false,
   },
 ];
 

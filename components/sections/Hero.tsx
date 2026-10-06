@@ -106,8 +106,8 @@ export default function Hero() {
         {/* Description */}
         <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={0.35}
           style={{ color: "#94a3b8", fontSize: "clamp(1rem, 2vw, 1.1rem)", lineHeight: 1.75, maxWidth: "580px", margin: 0 }}>
-          Desarrollador backend con Python especializado en APIs REST y sistemas con lógica de negocio compleja.
-          Proyectos en producción con FastAPI, Django, CI/CD y deploy automatizado.
+          Desarrollador backend con Python especializado en APIs REST, lógica de negocio compleja y despliegue automatizado.
+          Proyectos en producción con FastAPI, Django y CI/CD.
         </motion.p>
 
         {/* Stack tags */}

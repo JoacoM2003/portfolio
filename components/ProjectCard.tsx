@@ -8,6 +8,7 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
   "Full Stack":     { bg: "rgba(59,130,246,0.12)", text: "#60a5fa", border: "rgba(59,130,246,0.3)" },
   "Backend":        { bg: "rgba(168,85,247,0.12)", text: "#c084fc", border: "rgba(168,85,247,0.3)" },
   "Backend / Data": { bg: "rgba(6,182,212,0.12)",  text: "#22d3ee", border: "rgba(6,182,212,0.3)"  },
+  "Backend / IA":   { bg: "rgba(245,158,11,0.12)", text: "#fbbf24", border: "rgba(245,158,11,0.3)" },
 };
 
 interface ProjectCardProps {
@@ -154,6 +155,30 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
             Demo
+          </a>
+        )}
+        {p.mostrarCodigoEnTarjeta && (
+          <a
+            href={p.codigo}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.35rem",
+              padding: "0.55rem 0.65rem",
+              borderRadius: "0.45rem",
+              fontSize: "0.85rem",
+              fontWeight: 600,
+              color: "#94a3b8",
+              border: "1px solid rgba(255,255,255,0.1)",
+              background: "rgba(255,255,255,0.04)",
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Código
           </a>
         )}
       </div>

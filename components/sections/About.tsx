@@ -38,10 +38,10 @@ export default function About() {
             }}
           >
             <p style={{ color: "#94a3b8", fontSize: "1.05rem", lineHeight: 1.8, margin: 0 }}>
-              Desarrollador backend con Python especializado en APIs REST y sistemas con lógica de negocio
-              compleja. He construido aplicaciones en producción con autenticación, control de acceso por roles,
-              CI/CD automatizado y deploy en la nube. Estudiante avanzado de Ingeniería en Sistemas (UTN, 5to año)
-              con disponibilidad inmediata.
+              Desarrollador backend con Python especializado en APIs REST, lógica de negocio compleja y despliegue automatizado.
+              He construido aplicaciones en producción con autenticación, control de acceso por roles y CI/CD. Estudiante
+              avanzado de Ingeniería en Sistemas (UTN, 5to año) con disponibilidad inmediata. Participo en el laboratorio
+              de IA de la facultad (Lines Lab), en proyectos de investigación aplicada de NLP y automatización.
             </p>
           </div>
         </motion.div>

@@ -10,6 +10,18 @@ const fadeUp = {
 };
 
 export default function Projects() {
+  const projectOrder = [
+    "reclamos-urbanos",
+    "recomendador-peliculas",
+    "sistema-reservas",
+    "tickets",
+    "gestor-academico",
+    "movies-etl",
+  ];
+  const visibleProjects = projects
+    .filter((project) => project.visible !== false)
+    .sort((a, b) => projectOrder.indexOf(a.slug) - projectOrder.indexOf(b.slug));
+
   return (
     <section id="proyectos" style={{ padding: "6rem 1.5rem", maxWidth: "1200px", margin: "0 auto" }}>
       {/* Header */}
@@ -27,13 +39,13 @@ export default function Projects() {
           Proyectos Destacados
         </h2>
         <p style={{ color: "#94a3b8", fontSize: "1rem", maxWidth: "480px", lineHeight: 1.7, margin: 0 }}>
-          Aplicaciones en producción y proyectos que demuestran habilidades en backend, APIs y sistemas escalables.
+          Aplicaciones en producción y proyectos que demuestran habilidades en backend, APIs, lógica de negocio compleja y despliegue automatizado.
         </p>
       </motion.div>
 
       {/* Grid */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1.25rem" }}>
-        {projects.map((project, i) => (
+        {visibleProjects.map((project, i) => (
           <motion.div
             key={project.slug}
             initial={{ opacity: 0, y: 30 }}

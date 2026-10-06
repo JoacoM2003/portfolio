@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Joaquín Muñoz",
   },
   description:
-    "Desarrollador backend con Python especializado en APIs REST y sistemas con lógica de negocio compleja. Proyectos en producción con FastAPI, Django, CI/CD y deploy automatizado.",
+    "Desarrollador backend con Python especializado en APIs REST, lógica de negocio compleja y despliegue automatizado. Proyectos en producción con FastAPI, Django y CI/CD.",
   keywords: ["Backend Developer", "Python", "FastAPI", "Django", "PostgreSQL", "Docker", "Argentina"],
   authors: [{ name: "Joaquín Muñoz", url: "https://jmunozdev.vercel.app" }],
   metadataBase: new URL("https://jmunozdev.vercel.app"),
