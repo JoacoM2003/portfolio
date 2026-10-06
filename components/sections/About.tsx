@@ -67,7 +67,7 @@ export default function About() {
                 <p style={{ color: "#e2e8f0", fontWeight: 600, fontSize: "0.95rem", margin: "0 0 0.2rem" }}>
                   Ingeniería en Sistemas de Información
                 </p>
-                <p style={{ color: "#3b82f6", fontSize: "0.85rem", fontWeight: 500, margin: "0 0 0.35rem" }}>UTN · Facultad Regional Córdoba</p>
+                <p style={{ color: "#3b82f6", fontSize: "0.85rem", fontWeight: 500, margin: "0 0 0.35rem" }}>Universidad Tecnológica Nacional</p>
                 <p style={{ color: "#64748b", fontSize: "0.83rem", margin: 0 }}>5to año en curso · 2021 — actualidad</p>
               </div>
             </div>
